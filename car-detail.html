@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="./Assets/car-detail.css">
+    <link rel="stylesheet" href="./Assets/product.css">
+    <title>Thông tin chi tiết</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="car-detail" class="car-detail-container">
+        <!-- Nội dung sẽ được chèn bằng JavaScript -->
+    </div>
+
+    <div class="form-overlay" id="booking-form" style="display: none;">
+
+        <div class="form-container">
+          <h2>ĐẶT XE</h2>
+          <form id="form">
+            <label for="name"><i class="ti-user"></i> Họ & tên:</label>
+            <input type="text" name="name" required>
+      
+            <label for="phone"><i class="ti-mobile"></i> Số điện thoại:</label>
+            <input type="tel" name="phone" required>
+      
+            <label for="car"><i class="ti-shopping-cart"></i> Xe đã chọn:</label>
+            <input type="text" name="car" id="selected-car" readonly>
+      
+            <label for="date"><i class="ti-calendar"></i> Ngày đặt xe:</label>
+            <input type="date" name="date" required>
+            
+            <label for="return-date"><i class="ti-time"></i> Ngày trả xe:</label>
+            <input type="date" name="return_date" required>
+  
+  
+            <div class="button-group">
+              <button type="submit" class="confirm">Xác nhận</button>
+              <button type="button" onclick="closeForm()" class="cancel">Hủy</button>
+            </div>
+          </form>
+  
+          
+  
+        </div>
+      </div>
+      
+    <script src="header.js"></script>
+    <script src="main.js"></script>
+    <script>
+        renderHeader();
+   </script>
+</body>
+</html>

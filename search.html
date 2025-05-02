@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="./Assets/search.css">
+    <link rel="stylesheet" href="./icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Tìm kiếm</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="filter-container">
+        <input type="text" placeholder="Từ khóa tìm kiếm..." class="filter-select  ">
+       
+        
+        <select class="filter-select selected">
+            <option>Cần Thơ </option>
+          
+        </select>
+        <select id="seat-select" class="filter-select selected">
+          <option value="0">Tất cả dòng xe</option>
+    
+          
+        </select>
+
+
+        <select id="brand-select" class="filter-select selected">
+          <option value="">Tất cả hãng xe</option>
+        </select>
+      
+        <a href="#" class="clear-filter">Xóa bộ lọc</a>
+     </div>
+
+     <div class="result-bar">
+        <div class="result-count">
+          <strong class="result-find">không tìm thấy kết quả nào</strong>
+        </div>
+        <div class="sort-box">
+          <label for="sort-select">Sắp xếp:</label>
+          <select id="sort-select" class="sort-select">
+            <option>Chọn tiêu chí</option>
+            <option>Giá thấp đến cao</option>
+            <option>Giá cao đến thấp</option>
+            <option>Mới nhất</option>
+          </select>
+        </div>
+
+      </div>
+
+   <!--    ket qua tim thay -->
+
+        <div id="search-result" class="result-grid"></div>
+
+
+    <script src="header.js"></script>
+    <script src="main.js"></script>
+    <script src="search.js"></script>
+
+    <script>
+         renderHeader();
+    </script>
+</body>
+</html>
