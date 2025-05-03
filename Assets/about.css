@@ -1,0 +1,411 @@
+.intro-mekong {
+    padding: 60px 20px;
+    background: #fafafa;
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+  }
+  
+  .intro-mekong .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .company-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #b71c1c;
+    margin-bottom: 10px;
+  }
+  
+  .slogan {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+  }
+  
+  .intro-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .intro-images img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .location {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  
+  .intro-description p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+
+  .mekong-philosophy {
+    background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+  }
+  
+  .philosophy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .philosophy-content {
+    flex: 1 1 550px;
+  }
+  
+  .philosophy-content h2 {
+    font-size: 32px;
+    color: #b71c1c;
+    margin-bottom: 10px;
+  }
+  
+  .philosophy-content .tagline {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 25px;
+  }
+  
+  .philosophy-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .philosophy-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .philosophy-content ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 15px;
+    font-size: 15.5px;
+  }
+  
+  .philosophy-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #b71c1c;
+    font-weight: bold;
+  }
+  
+  .philosophy-image {
+    flex: 1 1 500px;
+    text-align: center;
+  }
+  
+  .philosophy-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .philosophy-image img:hover {
+    transform: scale(1.03);
+  }
+
+
+
+  /* Giao diện chính */
+.business-section {
+    background: #fafafa;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Tiêu đề */
+  .section-title {
+    font-size: 32px;
+    color: #b71c1c;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out 0.2s;
+  }
+  
+  /* Dịch vụ */
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out 0.4s;
+  }
+  
+  .service-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    flex: 1 1 400px;
+    min-width: 300px;
+  }
+  
+  .service-box h3 {
+    font-size: 20px;
+    color: #b71c1c;
+    margin-bottom: 15px;
+  }
+  
+  .service-box ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+  }
+  
+  /* Hình ảnh */
+  .image-gallery {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;         /* Không cho xuống hàng */
+    gap: 20px;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out 0.6s;
+  }
+  
+  .image-gallery img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .image-gallery {
+      flex-wrap: wrap;
+    }
+  
+    .image-gallery img {
+      max-width: 100%;
+    }
+  }
+  
+  
+  
+  .image-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hiệu ứng khi vào khung nhìn */
+  .fade-in.visible .section-title,
+  .fade-in.visible .section-subtitle,
+  .fade-in.visible .services-grid,
+  .fade-in.visible .image-gallery {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  .team-section {
+    background-color: #fefefe;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .team-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .team-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b00000;
+  }
+  
+  .team-header .subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .team-header .description {
+    max-width: 700px;
+    margin: 10px auto;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .team-member.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .team-member.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .team-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+  
+  .team-img img:hover {
+    transform: scale(1.03);
+  }
+  
+  .team-info {
+    max-width: 500px;
+  }
+  
+  .team-info h3 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .team-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .team-member,
+    .team-member.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+
+/* Container chính */
+.facility-section {
+    padding: 60px 20px;
+    background-color: #fdfdfd;
+  }
+  
+  /* Tiêu đề */
+  .facility-section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #b00000;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .facility-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #b00000;
+    margin: 12px auto 0;
+    border-radius: 4px;
+  }
+  
+  /* Mô tả ngắn */
+  .facility-section .subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  
+  /* Lưới hình ảnh */
+  .facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Thẻ ảnh */
+  .facility-card {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease;
+    background-color: white;
+  }
+  
+  .facility-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .facility-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .facility-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  
