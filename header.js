@@ -18,8 +18,8 @@ function renderHeader() {
                 <li><a href="#">Bảo dưỡng xe</a></li>
               </ul>
            </li>
-        <li><a href="#">Tin tức</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="./tintuc.html">Tin tức</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
         </ul>
 
       <ul id="nav" style="list-style-type: none; ">
@@ -34,8 +34,8 @@ function renderHeader() {
             <li><a href="./kiguixethang.html">Kí gửi xe tháng</a></li>
           </ul>
         </li>
-        <li><a href="#">Tin tức</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="./tintuc.html">Tin tức</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
       </ul>
   
       <div class="hotline">

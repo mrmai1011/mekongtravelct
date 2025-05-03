@@ -408,4 +408,80 @@
     transform: scale(1.05);
   }
   
+
+  .contact-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #b00000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contact-info p {
+    margin: 12px 0;
+  }
+  
+  .contact-info i,
+  .contact-info img {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .gmail-icon {
+    width: 22px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+  }
+  
+  /* Nút điện thoại */
+  .phone-box {
+    display: inline-block;
+    margin: 25px 0;
+    background: #b00000;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #fff;
+    font-style: italic;
+    font-size: 1.2rem;
+    box-shadow: 4px 4px 0 #004aad;
+    transition: transform 0.3s;
+  }
+  
+  .phone-box:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Lời cảm ơn */
+  .thank-you {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #222;
+    font-size: 1.1rem;
+  }
+  
   
