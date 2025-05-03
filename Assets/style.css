@@ -48,6 +48,7 @@
 
 #header {
   position: fixed;
+ 
   width: 100%;
     background-color: #000;
     height: 98px;
@@ -181,8 +182,17 @@
 @media (max-width: 768px) {
   .toggle-menu {
     display: block;
+    position: absolute;
+    right: 0;     /* Đặt sát bên phải */
+    top: 0;       /* Tuỳ chỉnh nếu cần */
+    padding-right: 10px;
   }
-
+  .hotline-search-box{
+    flex-direction: column;
+  }
+  .search-box{
+    width: 100%;
+  }
   #nav {
     display: none;
     flex-direction: column;
@@ -203,12 +213,15 @@
   #nav li {
     text-align: center;
   }
-  .more_inf .hotline-only{
+  /* .more_inf .hotline-only{
     line-height: 130px;
     transform: translateX(-15%);
    
   }
   .more_inf .hide-on-mobile {
+    display: none;
+  } */
+  .hotline{
     display: none;
   }
  
@@ -908,10 +921,11 @@
 .hotline-search-box{
 
   display: flex;
+
   justify-content: space-between; /* Cách đều hai cột */
-
+  width: 90%;
   gap: 40px; /* (tùy chọn) khoảng cách giữa hai cột */
-
+  padding-left: 10%;
   align-items: center;
   text-align: center;
 }
@@ -928,10 +942,10 @@
 }
 
 .search-box {
-  width: 400px;
+  width: 100%;
   background: white;
   border-radius: 10px;
-  margin-right: 200px;
+
   padding: 20px;
   font-family: sans-serif;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
