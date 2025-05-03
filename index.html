@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="./Assets/header.css">
     <link rel="stylesheet" href="./icons/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    
+    <link rel="stylesheet" href="./Assets/tour.css">
 </head>
 <body>
     
@@ -30,43 +29,93 @@
   </div>
 
      <!-- Begin content -->
-     <div class="content">
-        <h2 class="content-heading">LĨNH VỰC KINH DOANH</h2>
-        <div class="underline"></div>
-        <p class="content-text">Chào mừng đến với MEKONG TRAVEL – Giải pháp thuê xe đáng tin cậy tại Cần Thơ. Chúng tôi là đơn vị chuyên cung cấp dịch vụ cho thuê xe tự lái và xe có tài xế chuyên nghiệp, đáp ứng mọi nhu cầu di chuyển của khách hàng cá nhân và doanh nghiệp tại khu vực Cần Thơ và các tỉnh lân cận. Với đội xe đời mới, đa dạng chủng loại, thủ tục đơn giản và đội ngũ tài xế giàu kinh nghiệm, MEKONG TRAVEL cam kết mang đến cho bạn những hành trình an toàn, thoải mái và đúng lịch trình. Hãy để chúng tôi đồng hành cùng bạn trên mỗi chuyến đi – Chìa khóa cho chuyến đi hoàn hảo!
-        </p>
-     </div>
-        <!-- End content -->
-      <div class="hotline-search-box">
-        <div class="hotline-box">
-          <p>Hỗ trợ tư vấn du lịch: <strong>094-916-1698</strong></p><br>
+     <section class="business-section scroll-reveal">
+      <div class="container">
+        <h2 class="business-title"><i class="fas fa-briefcase"></i> LĨNH VỰC KINH DOANH</h2>
+        <div class="business-content">
           <p>
-            Vui lòng gọi đặt xe theo số Hotline: 
-            <span class="hotline1">0939.19.38.39</span> – 
-            <span class="hotline1">0939.659.839</span>
+            Chào mừng đến với <strong>MEKONG TRAVEL</strong> – Giải pháp thuê xe đáng tin cậy tại Cần Thơ.
+            Chúng tôi là đơn vị chuyên cung cấp dịch vụ cho thuê xe tự lái và xe có tài xế chuyên nghiệp,
+            đáp ứng mọi nhu cầu di chuyển của khách hàng cá nhân và doanh nghiệp tại khu vực Cần Thơ và các tỉnh lân cận.
+          </p>
+          <p>
+            Với đội xe đời mới, đa dạng chủng loại, thủ tục đơn giản và đội ngũ tài xế giàu kinh nghiệm,
+            <strong>MEKONG TRAVEL</strong> cam kết mang đến cho bạn những hành trình an toàn, thoải mái và đúng lịch trình.
+          </p>
+          <p class="highlight">
+            Hãy để chúng tôi đồng hành cùng bạn trên mỗi chuyến đi – <em>Chìa khóa cho chuyến đi hoàn hảo!</em>
           </p>
         </div>
-
-        <div class="search-box">
-          <div class="tabs">
-            <button class="tab active">Thuê xe</button>
-            <button class="tab">Thuê tài xế</button>
-          </div>
-        
-          <div class="form" id="form">
-            <select class="select red-border">
-              <option selected>Cần Thơ</option>
-            </select>
-        
-            <select id="select-seat" class="select">
-              <option value="0">Tất cả dòng xe</option>
-            </select>
-
-              <button class="search-btn" onclick="handleSearch()">Tìm kiếm</button>
-         
-          </div>
-        </div>
       </div>
+    </section>
+    
+        <!-- End content -->
+<div class="hotline-search-wrapper">
+  <div class="blur-background"></div> <!-- Nền hình ảnh mờ -->
+
+  <div class="hotline-search-box">
+    <div class="hotline-box">
+      <p>Hỗ trợ tư vấn du lịch: <strong>094-916-1698</strong></p><br>
+      <p>
+        Vui lòng gọi đặt xe theo số Hotline: 
+        <span class="hotline1">0939.19.38.39</span> – 
+        <span class="hotline1">0939.659.839</span>
+      </p>
+    </div>
+
+    <div class="search-box">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab(0)"><h4>THUÊ XE</h4></button>
+        <button class="tab" onclick="switchTab(1)"><h4>THUÊ LÁI XE</h4></button>
+      </div>
+
+      <div class="form" id="form">
+        <select class="select red-border">
+          <option selected>Cần Thơ</option>
+        </select>
+
+        <select id="select-seat" class="select">
+          <option value="0">Tất cả dòng xe</option>
+        </select>
+
+        <button class="search-btn" onclick="handleSearch()">Tìm kiếm <i class="fa fa-search search-icon"></i></button>
+      </div>
+
+      <div class="form" id="form-thue-laixe" style="display: none;">
+        <select id="province-select" class="select">
+          <option selected value="all">Tất cả tỉnh/thành</option>
+          <option value="Cần Thơ">Cần Thơ</option>
+          <option value="An Giang">An Giang</option>
+          <option value="Kiên Giang">Kiên Giang</option>
+          <option value="Đồng Tháp">Đồng Tháp</option>
+          <option value="Tiền Giang">Tiền Giang</option>
+          <option value="Bến Tre">Bến Tre</option>
+          <option value="Trà Vinh">Trà Vinh</option>
+          <option value="Sóc Trăng">Sóc Trăng</option>
+          <option value="Hậu Giang">Hậu Giang</option>
+          <option value="Vĩnh Long">Vĩnh Long</option>
+          <option value="Bạc Liêu">Bạc Liêu</option>
+          <option value="Cà Mau">Cà Mau</option>
+     
+        </select>
+    
+        <select id="district-select" class="select">
+          <option selected>Tất cả quận/huyện</option>
+        </select>
+    
+        <select class="select">
+          <option selected>Bằng lái</option>
+          <option>B1</option>
+          <option>B2</option>
+          <option>C</option>
+        </select>
+    
+        <button class="search-btn" onclick="searchTaiXe()">Tìm kiếm <i class="fa fa-search search-icon"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
      
 
             <!-- Begin Why Choose Us -->
@@ -117,7 +166,7 @@
                     <h1 class="places-heading">Tour du lịch</h1>
                     <p class="places-time"><i class="ti-car"> </i>Đội ngũ lái xe chuyên nghiệp giúp quý khách có những chuyến đi du lịch, công tác vô cùng thoải mái</p>
                     <p class="places-description"><i class="ti-wallet"> </i> Thiết kế tour du lịch lớn nhỏ trong nước từ xe 4 chỗ đến 45 chỗ</p>
-                    <button class="places-buy-btn js-buy-ticket">CHI TIẾT</button>
+                    <a href="./tour.html"><button class="places-buy-btn js-buy-ticket">CHI TIẾT</button></a>
                 </div>
             </div>
 
@@ -127,7 +176,7 @@
                     <h1 class="places-heading">Thuê lái xe hộ</h1>
                     <p class="places-time"><i class="ti-user"> </i>Dịch vụ thuê lái xe riêng để chuyến đi của quý khách được thoải mái và an toàn</p>
                     <p class="places-description"><i class="ti-wallet"> </i>Nhiệt tình chu đáo sẵn sàng phục vụ quý khách 24/7</p>
-                    <button class="places-buy-btn js-buy-ticket">CHI TIẾT</button>
+                    <a href="./laixeho.html"><button class="places-buy-btn js-buy-ticket">CHI TIẾT</button></a>
                 </div>
             </div>
 
@@ -198,6 +247,7 @@
 </div>
 <!-- End Rental Procedure -->
 
+<!-- Đối tác Mekong Travel -->
 
 <!-- Google Reviews Section -->
 <section class="review-section">
@@ -261,7 +311,7 @@
     </div>
   </section>
   
-
+  <!-- BENGIN FOOTER -->
   <footer class="footer">
   <div class="footer-container">
     <!-- Cột 1: Logo & thông tin công ty -->
@@ -332,6 +382,10 @@
 <script src="main.js"></script>
 <script>
     renderHeader();
+
+
+
+ 
   var swiper = new Swiper(".review-slider", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -350,6 +404,25 @@
     }
   });
 </script>
+
+<script>
+  const reveals = document.querySelectorAll(".scroll-reveal");
+
+  function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    reveals.forEach((el) => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.classList.add("revealed");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
+</script>
+
 
 </body>
 </html>

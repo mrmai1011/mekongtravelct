@@ -16,6 +16,7 @@ function getSearchParams() {
   // ✅ Render kết quả tìm kiếm vào #search-result
   function renderSearchResults(data) {
     const container = document.getElementById("search-result");
+    if (!container) return;
     container.innerHTML = "";
   
     if (!Array.isArray(data) || data.length === 0) {
@@ -114,6 +115,49 @@ function getSearchParams() {
         window.history.replaceState({}, "", newUrl);
       });
     }
+
+
+    const data = localStorage.getItem("searchResult");
+    /* console.log("data",data) */
+    if (data) {
+      const ketQua = JSON.parse(data);
+      renderTable(ketQua);
+    } 
+    
+   /*  loc lai lái xe tài xế */
+    const provinceSelect = document.getElementById("province-select-search");
+
+  if (provinceSelect) {
+  provinceSelect.addEventListener("change", () => {
+    const selectedProvince = provinceSelect.value;
+
+    // Lấy từ localStorage nếu có, nếu không thì dùng toàn bộ danh sách gốc
+    const data = localStorage.getItem("searchResult");
+    let fullResult;
+
+    try {
+      const parsed = JSON.parse(data);
+      fullResult = (parsed && parsed.length > 0) ? parsed : giaThueLaiXe;
+    } catch {
+      fullResult = giaThueLaiXe;
+    }
+
+    const filtered = selectedProvince === "all"
+      ? fullResult
+      : fullResult.filter(item => item.tinhThanh === selectedProvince);
+
+    renderTable(filtered);
+  });
+    }
+  
+    // Lúc vào trang, hiển thị sẵn kết quả ban đầu
+    const data1 = localStorage.getItem("searchResult");
+    if (data) {
+      const result = JSON.parse(data1);
+      renderTable(result);
+    }
+
+
   });
 
 
@@ -153,6 +197,9 @@ function getSearchParams() {
       }
     }
   }
+    
+  
+ 
 
   function setupFilterListeners() {
     const seatSelect = document.getElementById("seat-select");
@@ -182,4 +229,51 @@ function getSearchParams() {
       (seat === "0" || car.seats === seatNum) &&
       (!brand || car.brand === brand)
     );
+  }
+
+  function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      location: params.get("location") || "",
+      type: params.get("type") || ""
+    };
+  }
+  
+  function renderTable(ketQua) {
+    const container = document.getElementById("search-result-taixe");
+  
+    if (ketQua.length === 0) {
+    
+      return;
+    }
+  
+    // Tạo bảng HTML
+    let html = `
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tỉnh/Thành phố</th>
+            <th>Khu vực</th>
+            <th>Loại bằng lái</th>
+            <th>Giá/ngày (VNĐ)</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+  
+    ketQua.forEach((item, index) => {
+      html += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${item.tinhThanh}</td>
+          <td>${item.khuVuc}</td>
+          <td>${item.loaiBangLai}</td>
+          <td>${item.giaMotNgay.toLocaleString()}</td>
+        </tr>
+      `;
+    });
+  
+    html += `</tbody></table>`;
+    container.innerHTML = html;
   }

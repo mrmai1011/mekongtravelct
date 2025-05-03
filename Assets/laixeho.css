@@ -1,0 +1,337 @@
+body {
+    font-family: 'Times New Roman', Times, serif ;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    color: #d62828;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #d62828;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+  }
+  
+  .intro-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #f4dada;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+  }
+  
+  .intro-img {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .intro-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .intro-text {
+    flex: 1 1 50%;
+  }
+  
+  .intro-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  
+  .intro-text strong {
+    color: #d62828;
+  }
+  
+  .sub-title {
+    color: #d62828;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .benefits {
+    list-style: none;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  
+  .benefits li {
+    padding-left: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .form-section {
+    background: #fff;
+    border: 2px solid #d62828;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+  
+  .form-section label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-section input,
+  .form-section select,
+  .form-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  
+  .form-section textarea {
+    resize: vertical;
+  }
+  
+  .form-section button {
+    margin-top: 25px;
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .form-section button:hover {
+    background-color: #b71c1c;
+  }
+  
+  @media (max-width: 768px) {
+    .intro-box {
+      flex-direction: column;
+    }
+  }
+  
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .benefit-card {
+    background: #fff;
+    border: 1px solid #f1dada;
+    border-left: 6px solid #d62828;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefit-card .icon {
+    font-size: 30px;
+    color: #d62828;
+    margin-bottom: 12px;
+  }
+  
+  .benefit-card h4 {
+    color: #d62828;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .benefit-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .benefit-section {
+    margin-bottom: 60px; /* Tạo khoảng cách rõ ràng với form bên dưới */
+  }
+  
+
+
+  .driver-process {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .driver-process .section-title {
+    color: #d62828;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .driver-process .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #d62828;
+    margin: 16px auto 0;
+    border-radius: 2px;
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .step-box {
+    background-color: #fff4f4;
+    border: 1px solid #f0caca;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .step-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+  
+  .step-icon {
+    font-size: 36px;
+    color: #d62828;
+    margin-bottom: 16px;
+  }
+  
+  .step-box h4 {
+    font-size: 18px;
+    color: #d62828;
+    margin-bottom: 10px;
+  }
+  
+  .step-box p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .process-steps {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .step-box {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  .testimonial-section {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c00000;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .testimonial-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .testimonial-item {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .customer-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .stars {
+    color: #FFD700;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .review-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  

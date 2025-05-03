@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuê xe hoa - Mekong Travel</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="./icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./Assets/xehoa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="slider">
+        <div class="banner-container">
+          <img src="./images/img_s3.jpg" alt="" class="banner-image">
+          <div class="banner-title">
+              MEKONG TRAVEL<br>
+              <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
+          </div>
+    </div>
+    
+    <div class="highlight-section">
+        <div class="highlight-text">
+          <h2>Ngày cưới – Dấu ấn khởi đầu cho hành trình hạnh phúc</h2>
+          <p>
+            Ngày cưới không chỉ là thời khắc thiêng liêng trong đời mỗi người, mà còn là dịp để lưu giữ những kỷ niệm trọn đời. 
+            Từ những chi tiết nhỏ nhất như chiếc xe hoa cũng góp phần tạo nên một ngày trọng đại hoàn hảo, đẳng cấp và đầy ý nghĩa. 
+            Hiểu được điều đó, <strong>Mekong Travel</strong> luôn phục vụ những chiếc xe đẹp nhất, sang trọng và chỉn chu đến từng chi tiết.
+          </p>
+          <p>
+            Với kinh nghiệm tổ chức hàng trăm lễ cưới lớn nhỏ, chúng tôi tự hào mang đến dịch vụ xe hoa đẳng cấp, từ các dòng xe sedan sang trọng đến limousine thời thượng, 
+            được trang trí tinh tế theo phong cách hiện đại hoặc cổ điển theo yêu cầu.
+          </p>
+          <p>
+            Mỗi chiếc xe hoa không chỉ đơn thuần là phương tiện di chuyển, mà còn là biểu tượng của tình yêu, 
+            sự khởi đầu viên mãn cho hành trình hạnh phúc lứa đôi. 
+            <strong>Mekong Travel</strong> cam kết đồng hành cùng bạn trong từng khoảnh khắc đáng nhớ, để ngày cưới không chỉ đẹp mà còn thực sự hoàn hảo.
+          </p>
+        </div>
+        <div class="highlight-image">
+          <img src="./images/Xehoaa/IMG_0719.jpg" alt="Xe hoa ngày cưới Mekong Travel">
+        </div>
+      </div>
+      
+      <div class="item-xehoa"></div>
+      <!-- Form Đặt Xe Hoa -->
+      <div id="booking-form-hoa" class="form-overlay" style="display: none;">
+        <div class="form-container">
+          <h2>Đặt Xe Hoa</h2>
+          <form id="form-hoa">
+            <label>Họ và tên:</label>
+            <input type="text" name="name" required>
+            <span class="error-msg" data-for="name"></span>
+      
+            <label>Số điện thoại:</label>
+            <input type="text" name="phone" required>
+            <span class="error-msg" data-for="phone"></span>
+      
+            <label>Lái xe:</label>
+            <select name="driver" required>
+              <option value="Có">Có</option>
+              <option value="Không">Không</option>
+            </select>
+      
+            <label>Lộ trình xuất phát:</label>
+            <input type="text" name="from" required>
+      
+            <label>Lộ trình đến:</label>
+            <input type="text" name="to" required>
+      
+            <label>Ngày đặt xe:</label>
+            <input type="date" name="date" required>
+            <span class="error-msg" data-for="date"></span>
+      
+            <label>Ngày trả xe:</label>
+            <input type="date" name="return_date" required>
+      
+            <label>Ghi chú:</label>
+            <textarea name="note" rows="3"></textarea>
+      
+            <input type="hidden" name="car" id="selected-car-hoa">
+      
+            <button type="submit">Đặt xe</button>
+            <button type="button" onclick="closeFormHoa()">Huỷ</button>
+          </form>
+        </div>
+      </div>
+      
+
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal");
+                observer.unobserve(entry.target); // chỉ kích hoạt 1 lần
+              }
+            });
+          }, { threshold: 0.2 });
+      
+          const target = document.querySelector(".highlight-section");
+          if (target) observer.observe(target);
+        });
+      </script>
+      
+</body>
+</html>
+
+
+    <script src="header.js"></script>
+    <script src="main.js"></script>
+    <script src="./xehoa.js"></script>
+    <script>
+        renderHeader();
+   </script>
+</body>
+</html>

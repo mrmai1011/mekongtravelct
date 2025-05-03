@@ -58,17 +58,26 @@
     /* justify-content: left; */ /* nếu muốn logo trái, menu phải */
     /* justify-content: space-between; */
 }
-  
+
 .logo_img {
     width: 98px;
     height: 98px;
+}
+
+.toggle-menu{
+  display: none;
+  color:  white;
+  text-align: center;
+  line-height: 98px;
+  padding-left: 10px;
+  font-size: 50px;
 }
   
 #nav {
     display: flex;
     list-style: none;
     padding-left: 30px;
-   
+  
     
 }
   
@@ -76,6 +85,7 @@
     padding-left: 24px;
     padding-right: 24px;
     position: relative;
+    
     
 }
   
@@ -136,6 +146,73 @@
 .hotline .more_inf li a:hover,
 .hotline .more_inf li:hover {
     color: rgb(236, 236, 50);
+}
+
+.subnavMobie
+{
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 100px;
+  left: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.subnavMobie li {
+    
+  background-color: rgba(128, 128, 128, 0.5);
+
+  
+}
+
+.subnavMobie li a:hover {
+  color: #ff3c2d;
+}
+.subnavMobie li a {
+  color: #fff;
+  font-size: 20px;
+  line-height: 43px;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+
+/* khi chuyen qua man hinh dien thoai */
+@media (max-width: 768px) {
+  .toggle-menu {
+    display: block;
+  }
+
+  #nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+
+  #nav.active {
+    display: flex;
+  }
+
+  #nav li {
+    text-align: center;
+  }
+  .more_inf .hotline-only{
+    line-height: 130px;
+    transform: translateX(-15%);
+   
+  }
+  .more_inf .hide-on-mobile {
+    display: none;
+  }
+ 
+ 
 }
 
 .slider {
@@ -882,6 +959,7 @@
 .tab.active {
   color: red;
   border-bottom: 2px solid red;
+  
 }
 
 .form .select {
@@ -889,13 +967,14 @@
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 
 .form .red-border {
   border: 1px solid red;
   color: red;
+  font-size: 16px;
 }
 
 .price-row {
@@ -928,8 +1007,17 @@
   padding: 10px 16px;
   font-weight: bold;
   cursor: pointer;
+  opacity: 0.7;
 }
 
+/* Ẩn icon ban đầu */
+
+
+/* Hiện icon khi hover nút */
+.search-btn:hover{
+  opacity: 1;
+  
+}
 
 
 .hotline-number {
@@ -938,6 +1026,64 @@
   font-weight: 500;
 }
 
+
+.business-section {
+  background-color:#fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.business-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.business-title {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.business-title i {
+  margin-right: 10px;
+  color: red;
+}
+
+.business-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.business-content strong {
+  color: red;
+}
+
+.business-content .highlight {
+  font-size: 18px;
+  color: #b10000;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
+  border-left: 4px solid red;
+  padding-left: 15px;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 

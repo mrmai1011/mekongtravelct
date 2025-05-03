@@ -182,3 +182,28 @@
   .car-card:hover{
     cursor: pointer;
   }
+
+
+  .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin-top: 1rem;
+  }
+  
+  .result-table th {
+    background-color: #c00;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .result-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    vertical-align: top;
+  }
+  
+  .result-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
