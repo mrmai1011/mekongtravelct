@@ -923,9 +923,9 @@
   display: flex;
 
   justify-content: space-between; /* Cách đều hai cột */
-  width: 90%;
+  width: 80%;
   gap: 40px; /* (tùy chọn) khoảng cách giữa hai cột */
-  padding-left: 10%;
+  padding-left: 20%;
   align-items: center;
   text-align: center;
 }
@@ -938,6 +938,7 @@
   margin: 20px auto;
   text-align: center;
   font-family: Arial, sans-serif;
+  width: 100%;
  
 }
 
