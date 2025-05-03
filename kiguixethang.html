@@ -16,9 +16,9 @@
     <div id="header"></div>
 
     <div class="slider">
-      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
-      <img src="./images/img_s2.jpg" alt="" class="banner-image">
-      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+      <img src="./images/Slider/s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s1.jpg" alt="" class="banner-image">
+      <img src="./images/Content/ct2.jpg" alt="" class="banner-image">
     
       <div class="banner-container">
         <div class="banner-text">
@@ -49,17 +49,17 @@
       
 
       <div class="booking-support-wrapper">
-        <div class="booking-form">
+        <form id="consignForm" class="booking-form">
           <h2>Thông tin chủ xe cần kí gửi</h2>
-          <input type="text" placeholder="Số điện thoại">
-          <input type="text" placeholder="Họ & tên...">
-          <input type="car-type" placeholder="Tên xe bạn muốn kí gửi...">
-          <textarea placeholder="Lời nhắn"></textarea>
+          <input type="text" name="phone" placeholder="Số điện thoại" required>
+          <input type="text" name="name" placeholder="Họ & tên..." required>
+          <input type="text" name="car" placeholder="Tên xe bạn muốn kí gửi..." required>
+          <textarea name="message" placeholder="Lời nhắn"></textarea>
           <label class="checkbox-wrapper">
-            <input type="checkbox"> Đồng ý với <a href="#">chính sách bảo mật</a>
+            <input type="checkbox" name="policy"> Đồng ý với <a href="#">chính sách bảo mật</a>
           </label>
-          <button class="btn-submit">Gửi liên hệ</button>
-        </div>
+          <button class="btn-submit" type="submit">Gửi liên hệ</button>
+        </form>
       
         <div class="support-info">
           <div class="support-card">

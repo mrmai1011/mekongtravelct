@@ -17,9 +17,9 @@
     <!-- End header -->
     <!-- Begin slider -->
     <div class="slider">
-      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
-      <img src="./images/img_s2.jpg" alt="" class="banner-image">
-      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+      <img src="./images/Slider/s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s1.jpg" alt="" class="banner-image">
+      <img src="./images/Content/ct2.jpg" alt="" class="banner-image">
     
       <div class="banner-container">
         <div class="banner-text">
@@ -57,11 +57,11 @@
 
   <div class="hotline-search-box">
     <div class="hotline-box">
-      <p>Hỗ trợ tư vấn du lịch: <strong>094-916-1698</strong></p><br>
+      <p>Hỗ trợ tư vấn du lịch: <strong>094-916-1698 (Minh Mẫn)</strong></p><br>
       <p>
         Vui lòng gọi đặt xe theo số Hotline: 
-        <span class="hotline1">0939.19.38.39</span> – 
-        <span class="hotline1">0939.659.839</span>
+        <span class="hotline1">094-916-1698 (Minh Mẫn)</span> – <br>
+        <span class="hotline1">082-399-6643 (Minh Hiếu)</span>
       </p>
     </div>
 
@@ -91,6 +91,7 @@
           <option value="Kiên Giang">Kiên Giang</option>
           <option value="Đồng Tháp">Đồng Tháp</option>
           <option value="Tiền Giang">Tiền Giang</option>
+          <option value="Hồ Chí Minh">Hồ Chí Minh</option>
           <option value="Bến Tre">Bến Tre</option>
           <option value="Trà Vinh">Trà Vinh</option>
           <option value="Sóc Trăng">Sóc Trăng</option>
@@ -107,7 +108,6 @@
     
         <select class="select">
           <option selected>Bằng lái</option>
-          <option>B1</option>
           <option>B2</option>
           <option>C</option>
         </select>
@@ -280,8 +280,8 @@
         </div>
 
         <div class="swiper-slide review-box">
-            <img src="https://i.pravatar.cc/60?img=4" class="avatar" />
-            <h4>TƯỜNG VĂN NGUYỄN</h4>
+            <img src="./images/avatar/Capture.JPG" class="avatar" />
+            <h4>VÕ MINH HIẾU</h4>
             <div class="stars">★★★★★</div>
             <p>Xe đẹp, nhận dễ dàng, giá hợp lý! Sẽ giới thiệu cho bạn bè.</p>
           </div>
@@ -406,6 +406,28 @@
     images[current].classList.add('active');
   }, 5000);
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".step, .benefit-item, .places-item");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    items.forEach(item => {
+      observer.observe(item);
+    });
+  });
+</script>
+
+
 
 
 

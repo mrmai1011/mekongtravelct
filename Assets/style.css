@@ -334,7 +334,7 @@
 .text-h1{
     text-align: center;
     justify-content: center;
-    color: red;
+    color: #D50000;
   }
 
 /*   thong tin xe 4 cho */
@@ -380,7 +380,7 @@
   }
   
   .item-button {
-    background-color: red;
+    background-color: #D50000;
     color: #fff;
     border: none;
     padding: 6px;
@@ -570,7 +570,7 @@
     width: fit-content; /* để nội dung không chiếm hết chiều ngang */
     padding: 40px; /* đẩy xuống 20px như bạn yêu cầu ở trước */
     cursor: pointer;
-    color: #ff3c2d;
+    color: 	#D50000;
 }
 
 
@@ -585,7 +585,7 @@
 .underline {
   width: 60px;
   height: 4px;
-  background-color: red;
+  background-color: #D50000;
   margin: 10px auto; /* căn giữa theo chiều ngang và cách tiêu đề */
   border-radius: 2px;
 }
@@ -656,7 +656,7 @@
 .places-time i,
 .places-description i {
   margin-right: 6px;
-  color: red;
+  color: #D50000;
 }
 
 .places-buy-btn {
@@ -665,7 +665,7 @@
   padding: 10px 20px;
   font-size: 14px;
   border: none;
-  background-color: red;
+  background-color: #D50000;
   color: #fff;
   font-weight: bold;
   border-radius: 6px;
@@ -691,6 +691,22 @@
   }
 }
 
+.places-item {
+  opacity: 0;
+  transform: translateY(50px) scale(1); /* giữ scale(1) để có thể zoom sau này */
+  transition: all 0.6s ease;
+}
+
+.places-item.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* về vị trí gốc */
+}
+
+.places-item:hover {
+  transform: translateY(0) scale(1.03); /* zoom nhẹ nhưng không di chuyển nữa */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+/* phần vì sao bạn cho mekong Travel */
 
 .why-choose-us {
   padding: 50px 0;
@@ -716,7 +732,7 @@
 
 .benefit-item i {
   font-size: 40px;
-  color: red;
+  color: #D50000;
   margin-bottom: 10px;
 }
 
@@ -731,6 +747,18 @@
   color: #666;
 }
 
+.benefit-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.benefit-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* Thủ tục thuê xe - tương tự "Vì sao chọn Mekong Travel" */
 .rental-procedure {
   padding: 60px 20px;
@@ -741,14 +769,14 @@
 .rental-procedure .content-heading {
   font-size: 28px;
   font-weight: bold;
-  color: red;
+  color: #D50000;
   margin-bottom: 10px;
 }
 
 .rental-procedure .underline {
   width: 60px;
   height: 4px;
-  background-color: red;
+  background-color: #D50000;
   margin: 0 auto 30px;
   border-radius: 2px;
 }
@@ -778,7 +806,7 @@
 
 .step i {
   font-size: 36px;
-  color: red;
+  color: #D50000;
   margin-bottom: 15px;
   display: inline-block;
 }
@@ -793,6 +821,17 @@
   font-size: 16px;
   color: #555;
   line-height: 1.6;
+}
+
+.step {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -869,7 +908,7 @@
 .map-section h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: red;
+  color: #D50000;
 }
 
 .map-container {
@@ -968,7 +1007,7 @@
   padding: 10px 20px;
   border-radius: 8px;
   background: #fff;
-  color: red;
+  color: #D50000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
 }
@@ -983,7 +1022,7 @@
 .section-heading .underline {
   width: 80px;
   height: 4px;
-  background-color: red;
+  background-color: #D50000;
   margin: 12px auto 0;
   border-radius: 2px;
 }
@@ -1031,7 +1070,7 @@
 }
 
 .hotline-box {
-  border: 2px solid red;
+  border: 2px solid #D50000;
   background-color: #fff;
   padding: 15px;
 /*   min-width: 300px; */
@@ -1072,8 +1111,8 @@
 }
 
 .tab.active {
-  color: red;
-  border-bottom: 2px solid red;
+  color: #D50000;
+  border-bottom: 2px solid #D50000;
   
 }
 
@@ -1087,8 +1126,8 @@
 }
 
 .form .red-border {
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #D50000;
+  color: 	#D50000;
   font-size: 16px;
 }
 
@@ -1115,7 +1154,7 @@
 }
 
 .search-btn {
-  background: red;
+  background: #D50000;
   color: white;
   border: none;
   border-radius: 8px;
@@ -1136,7 +1175,7 @@
 
 
 .hotline-number {
-  color: red;
+  color: 	#D50000;
   font-style: italic;
   font-weight: 500;
 }
@@ -1155,7 +1194,7 @@
 
 .business-title {
   font-size: 30px;
-  color: red;
+  color: 	#D50000;
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
@@ -1164,7 +1203,7 @@
 
 .business-title i {
   margin-right: 10px;
-  color: red;
+  color: 	#D50000;
 }
 
 .business-content p {
@@ -1176,7 +1215,7 @@
 }
 
 .business-content strong {
-  color: red;
+  color: 	#D50000;
 }
 
 .business-content .highlight {
@@ -1185,7 +1224,7 @@
   font-weight: bold;
   text-align: center;
   margin-top: 25px;
-  border-left: 4px solid red;
+  border-left: 4px solid #D50000;
   padding-left: 15px;
 }
 

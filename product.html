@@ -16,9 +16,9 @@
     <div id="header"></div>
 
     <div class="slider">
-      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
-      <img src="./images/img_s2.jpg" alt="" class="banner-image">
-      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+      <img src="./images/Slider/s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s1.jpg" alt="" class="banner-image">
+      <img src="./images/Content/ct2.jpg" alt="" class="banner-image">
     
       <div class="banner-container">
         <div class="banner-text">
@@ -91,15 +91,16 @@
     <div class="booking-support-wrapper">
       <div class="booking-form">
         <h2>Thông tin đặt xe</h2>
-        <input type="text" placeholder="Số điện thoại">
-        <input type="text" placeholder="Họ & tên...">
-        <input type="email" placeholder="Địa chỉ email...">
-        <textarea placeholder="Lời nhắn"></textarea>
+        <input type="text" id="phone" placeholder="Số điện thoại">
+        <input type="text" id="name" placeholder="Họ & tên...">
+        <input type="email" id="email" placeholder="Địa chỉ email...">
+        <textarea id="message" placeholder="Lời nhắn"></textarea>
         <label class="checkbox-wrapper">
-          <input type="checkbox"> Đồng ý với <a href="#">chính sách bảo mật</a>
+          <input type="checkbox" id="policy"> Đồng ý với <a href="#">chính sách bảo mật</a>
         </label>
-        <button class="btn-submit">Gửi liên hệ</button>
+        <button class="btn-submit" onclick="submitForm()">Gửi liên hệ</button>
       </div>
+      
     
       <div class="support-info">
         <div class="support-card">
@@ -230,6 +231,26 @@
     current = (current + 1) % images.length;
     images[current].classList.add('active');
   }, 5000);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".step, .benefit-item, .places-item");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    items.forEach(item => {
+      observer.observe(item);
+    });
+  });
 </script>
     
 </body>

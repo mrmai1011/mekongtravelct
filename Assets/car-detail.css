@@ -1,109 +1,144 @@
 .car-detail-container {
-    max-width: 1500px;
-    margin-left: 220px;
- 
-    padding-top: 120px; /* Thêm khoảng cách bên trong phía trên */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .detail-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 100%;
-  }
-  
-  .image-block {
-    flex: 1 1 50%;
-    max-width: 1000px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
-  }
-  
-  .image-block img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .info-block {
-    flex: 1 1 40%;
-    display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.image-block {
+  flex: 1 1 55%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-block:hover {
+  transform: scale(1.02);
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.info-block {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.info-block h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #555;
+}
+
+.info-list li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.info-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button-group .btn {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-group .btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.zalo {
+  background-color: #0288d1;
+  color: #fff;
+}
+
+.btn.call {
+  background-color: #d50000;
+  color: #fff;
+}
+
+.btn.send {
+  background-color: #f9a825;
+  color: #fff;
+}
+
+.btn.share {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.btn i {
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .car-detail-container {
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  .info-block h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d50000;
-  }
-  
-  .info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .info-list li {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .button-group {
-    display: flex;
-    flex-direction: column; /* ← chuyển từ ngang thành dọc */
-    gap: 10px;               /* khoảng cách giữa các dòng */
-    margin-top: 10px;
-   width: 300px;
-  }
-  
-  .button-group .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    height: 50px;
-  
-  }
-  
-  .btn.zalo {
-    background-color: #007aff;
-  }
-  
-  .btn.call {
-    background-color: #d50000;
-  }
-  .btn.send {
-    background-color: #d6a209;
-  }
-  
-  
-  .btn.share {
-    background-color: #3b5998;
-    color: white;
-  }
-  
-  .share-buttons {
-    margin-top: 15px;
-  
+    gap: 30px;
+    padding: 80px 20px;
   }
 
-  
+  .image-block, .info-block {
+    flex: 1 1 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -17,9 +17,9 @@
     <div id="header"></div>
 
     <div class="slider">
-      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
-      <img src="./images/img_s2.jpg" alt="" class="banner-image">
-      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+      <img src="./images/Slider/s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s1.jpg" alt="" class="banner-image">
+      <img src="./images/Content/ct2.jpg" alt="" class="banner-image">
     
       <div class="banner-container">
         <div class="banner-text">
@@ -139,7 +139,7 @@
 
     <!-- travel-booking-form.html -->
 <div class="travel-form-container">
-    <h2 style="color: red;">ĐẶT TOUR DU LỊCH</h2>
+    <h2 style="color: #D50000;">ĐẶT TOUR DU LỊCH</h2>
     <form id="tour-form" class="travel-form">
       <label>Họ và tên:</label>
       <input type="text" name="fullname" required>
@@ -183,15 +183,16 @@
 
     <!-- Đối tác Mekong Travel -->
 <section class="partner-section">
-    <h2 class="partner-title">Đối tác của chúng tôi</h2>
+    <h2 class="partner-title" style="text-transform: uppercase;
+    color: #D50000;">Đối tác của chúng tôi</h2>
     <div class="swiper partner-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="partner1.png" alt="Partner 1" /></div>
-        <div class="swiper-slide"><img src="partner2.png" alt="Partner 2" /></div>
-        <div class="swiper-slide"><img src="partner3.png" alt="Partner 3" /></div>
-        <div class="swiper-slide"><img src="partner4.png" alt="Partner 4" /></div>
-        <div class="swiper-slide"><img src="partner5.png" alt="Partner 5" /></div>
-        <div class="swiper-slide"><img src="partner6.png" alt="Partner 6" /></div>
+        <div class="swiper-slide"><img src="./images/Logo/logo_2.png" alt="Partner 1" /></div>
+        <div class="swiper-slide"><img src="./images/Logo/logo_3.png" alt="Partner 2" /></div>
+        <div class="swiper-slide"><img src="./images/Logo/logo_4.png" alt="Partner 3" /></div>
+        <div class="swiper-slide"><img src="./images/Logo/logo_5.png" alt="Partner 4" /></div>
+        <div class="swiper-slide"><img src="./images/Logo/logo_6.png" alt="Partner 5" /></div>
+        <div class="swiper-slide"><img src="./images/Logo/logo_7.png" alt="Partner 6" /></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -204,19 +205,19 @@
       <h2 class="reviews-title">Khách hàng nói gì về Mekong Travel?</h2>
       <div class="review-slider">
         <div class="review-card">
-          <img src="./images/user1.jpg" alt="User 1">
+          <img src="./images/avatar/mai.jpg" alt="User 1">
           <h4>Nguyễn Thị Mai</h4>
           <p class="stars">★★★★★</p>
           <p class="comment">Dịch vụ tuyệt vời! Xe mới, lái xe lịch sự, đúng giờ. Sẽ tiếp tục ủng hộ!</p>
         </div>
         <div class="review-card">
-          <img src="./images/user2.jpg" alt="User 2">
+          <img src="./images/avatar/Duc.png" alt="User 2">
           <h4>Trần Minh Đức</h4>
           <p class="stars">★★★★☆</p>
           <p class="comment">Hành trình suôn sẻ, nhân viên tư vấn nhiệt tình. Giá hợp lý, sẽ giới thiệu bạn bè!</p>
         </div>
         <div class="review-card">
-          <img src="./images/user3.jpg" alt="User 3">
+          <img src="./images/avatar/anh-gai-xinh-nguoi-that-dang-yeu_043411553.jpg" alt="User 3">
           <h4>Lê Anh Thư</h4>
           <p class="stars">★★★★★</p>
           <p class="comment">Lái xe thân thiện, hỗ trợ khách tận tình. Tour rất đáng tiền!</p>
@@ -355,6 +356,25 @@
     current = (current + 1) % images.length;
     images[current].classList.add('active');
   }, 5000);
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".step, .benefit-item, .places-item");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    items.forEach(item => {
+      observer.observe(item);
+    });
+  });
 </script>
 </body>
 
