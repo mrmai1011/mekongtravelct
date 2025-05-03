@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedDate = new Date(dateInput.value);
     selectedDate.setHours(0, 0, 0, 0);
 
-    console.log ('Test')
+   
 
     // Kiểm tra đầu vào
     if (name.length < 3) {
@@ -83,8 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Gửi form qua Google Apps Script
-    const formData = new FormData(form);
-    const webhook = "https://script.google.com/macros/s/AKfycbwroOwKS1tGGsYLq72-ECpJnpnjQ_Egikq7P9lj0faGsnxKQq5F0itEF3ISQJdxmiIc/exec";
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("phone", phone);
+    console.log("name", name, "phone " , phone)
+   /*  console.log(formData.name) */
+    const webhook = "https://script.google.com/macros/s/AKfycbzdEdrAVXSHhYAJLHewJwADk42BdrFY4bW5tXc0x_0OF1YKE9gJ6F9_37t5S-a86AL8pA/exec";
 
     try {
       const res = await fetch(webhook, {
