@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Gửi form nếu hợp lệ
       const formData = new FormData(form);
-      const webhook = "https://script.google.com/macros/s/AKfycbxFkHIK_9Oeer-7seZn0NSNNFw-vqMHmo6L7MSVa0MsylYZiHqzyQxn38M-vEpW8NY_/exec";
+      const webhook = "https://script.google.com/macros/s/AKfycbzGrgqD-3EGcu7yphChdJcZOjCYvyDZsoRz_odyu4ihKtlkQ9fzR6-rM1wy1TgT2fs/exec";
       
   
       try {
