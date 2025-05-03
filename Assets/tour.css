@@ -282,7 +282,6 @@
   display: flex;
   gap: 20px;
   overflow: hidden;
-  animation: slideReviews 20s infinite linear;
 }
 
 .review-card {
