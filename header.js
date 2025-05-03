@@ -31,8 +31,7 @@ function renderHeader() {
             <li><a href="./tour.html">Tour du lịch</a></li>
             <li><a href="./laixeho.html">Thuê lái xe hộ</a></li>
             <li><a href="./xehoa.html">Thuê xe hoa</a></li>
-            <li><a href="#">Kí gửi xe tháng</a></li>
-            <li><a href="#">Bảo dưỡng xe</a></li>
+            <li><a href="./kiguixethang.html">Kí gửi xe tháng</a></li>
           </ul>
         </li>
         <li><a href="#">Tin tức</a></li>
