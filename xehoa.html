@@ -15,12 +15,16 @@
     <div id="header"></div>
 
     <div class="slider">
-        <div class="banner-container">
-          <img src="./images/img_s3.jpg" alt="" class="banner-image">
-          <div class="banner-title">
-              MEKONG TRAVEL<br>
-              <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
-          </div>
+      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s2.jpg" alt="" class="banner-image">
+      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+    
+      <div class="banner-container">
+        <div class="banner-text">
+          MEKONG TRAVEL<br>
+          <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
+        </div>
+      </div>
     </div>
     
     <div class="highlight-section">
@@ -131,21 +135,21 @@
         <h2 class="section-title">Khách hàng nói gì về dịch vụ xe hoa của Mekong Travel</h2>
         <div class="review-slider">
           <div class="review-card">
-            <img src="https://via.placeholder.com/80" alt="Khách hàng 1" class="avatar">
+            
             <h3 class="review-name">Nguyễn Thị Lan</h3>
             <div class="review-stars">★★★★★</div>
             <p class="review-text">Dịch vụ xe hoa rất tuyệt vời! Xe sạch sẽ, tài xế lịch sự, đúng giờ. Cảm ơn Mekong Travel!</p>
           </div>
       
           <div class="review-card">
-            <img src="https://via.placeholder.com/80" alt="Khách hàng 2" class="avatar">
+            
             <h3 class="review-name">Trần Minh Khang</h3>
             <div class="review-stars">★★★★☆</div>
             <p class="review-text">Xe đẹp và được trang trí tinh tế. Nhân viên hỗ trợ rất chuyên nghiệp. Sẽ giới thiệu cho bạn bè!</p>
           </div>
       
           <div class="review-card">
-            <img src="https://via.placeholder.com/80" alt="Khách hàng 3" class="avatar">
+           
             <h3 class="review-name">Lê Thị Hồng</h3>
             <div class="review-stars">★★★★★</div>
             <p class="review-text">Dịch vụ tốt, giá hợp lý. Rất ưng ý với chiếc xe hoa hôm cưới!</p>
@@ -250,5 +254,17 @@
     <script>
         renderHeader();
    </script>
+
+   <!-- chay anh slider -->
+<script>
+  const images = document.querySelectorAll('.banner-image');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 5000);
+</script>
 </body>
 </html>

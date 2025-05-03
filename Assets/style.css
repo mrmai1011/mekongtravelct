@@ -229,16 +229,81 @@
 }
 
 .slider {
-    
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-image {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.banner-image.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%); /* bắt đầu thấp hơn */
+  opacity: 0;
+  animation: slideUp 1.2s ease-out forwards;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translate(-50%, 20%);
+    opacity: 0;
   }
-  
-  .banner-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
   }
+}
+
+
+.banner-text .subtitle {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-transform: none;
+}
+
+
+
   
+
+
+
+
+
+
+
+
+
+
+
+
   .text-content {
     position: absolute;
     bottom: 40px; /* Dời lên trên 20px */

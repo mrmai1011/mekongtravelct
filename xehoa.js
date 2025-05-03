@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Gán tên xe hoa khi bấm nút
   document.querySelectorAll(".item-button").forEach(button => {
     button.addEventListener("click", function () {
-      const tenXe = this.closest(".item")?.querySelector(".item-title")?.textContent.trim();
+      const tenXe = this.closest(".item")?.querySelector("h3")?.textContent.trim();
       if (tenXe) {
         document.getElementById("selected-car-hoa").value = tenXe;
       }
@@ -43,10 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const driver = form.querySelector('select[name="driver"]').value;
     const from = form.querySelector('input[name="from"]').value.trim();
     const to = form.querySelector('input[name="to"]').value.trim();
-    const selectedDate = new Date(dateInput.value);
+    const date = dateInput.value;
+    const return_date = returnDateInput.value;
+    const note = form.querySelector('textarea[name="note"]').value.trim();
+    const car = document.getElementById("selected-car-hoa").value;
+
+    const selectedDate = new Date(date);
     selectedDate.setHours(0, 0, 0, 0);
 
-   
+    console.log('Gửi thành công!')
 
     // Kiểm tra đầu vào
     if (name.length < 3) {
@@ -86,9 +91,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("phone", phone);
-    console.log("name", name, "phone " , phone)
-   /*  console.log(formData.name) */
-    const webhook = "https://script.google.com/macros/s/AKfycbzdEdrAVXSHhYAJLHewJwADk42BdrFY4bW5tXc0x_0OF1YKE9gJ6F9_37t5S-a86AL8pA/exec";
+    formData.append("driver", driver);
+    formData.append("from", from);
+    formData.append("to", to);
+    formData.append("date", date);
+    formData.append("return_date", return_date);
+    formData.append("note", note);
+    formData.append("car", car);
+
+    const webhook = "https://script.google.com/macros/s/AKfycbxO9_WLQo_BTH6pgMHVKrGnE0ITZS4MOfe_MR7lIBmzmjfz6fz8jMuHpa_av_ptdu1kww/exec";
 
     try {
       const res = await fetch(webhook, {

@@ -16,12 +16,16 @@
     <div id="header"></div>
 
     <div class="slider">
+      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s2.jpg" alt="" class="banner-image">
+      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+    
       <div class="banner-container">
-        <img src="./images/img_s3.jpg" alt="" class="banner-image">
-        <div class="banner-title">
-            MEKONG TRAVEL<br>
-            <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
+        <div class="banner-text">
+          MEKONG TRAVEL<br>
+          <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
         </div>
+      </div>
     </div>
     
     <div class="rental-procedure">
@@ -216,6 +220,17 @@
     <script>
        renderHeader();
     </script>
+
+<script>
+  const images = document.querySelectorAll('.banner-image');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 5000);
+</script>
     
 </body>
 </html>

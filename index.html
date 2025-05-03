@@ -17,16 +17,18 @@
     <!-- End header -->
     <!-- Begin slider -->
     <div class="slider">
-        <img src="./images/img_s1.jpg" alt="" class="banner-image">
-    <!-- End slider -->
-
-    <div class="banner-container">
-      
-      <div class="banner-title">
+      <img src="./images/img_s1.jpg" alt="" class="banner-image active">
+      <img src="./images/img_s2.jpg" alt="" class="banner-image">
+      <img src="./images/img_s3.jpg" alt="" class="banner-image">
+    
+      <div class="banner-container">
+        <div class="banner-text">
           MEKONG TRAVEL<br>
           <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
+        </div>
       </div>
-  </div>
+    </div>
+    
 
      <!-- Begin content -->
      <section class="business-section scroll-reveal">
@@ -412,6 +414,20 @@
   window.addEventListener("scroll", revealOnScroll);
   window.addEventListener("load", revealOnScroll);
 </script>
+ 
+
+<!-- chay anh slider -->
+<script>
+  const images = document.querySelectorAll('.banner-image');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 5000);
+</script>
+
 
 
 </body>
