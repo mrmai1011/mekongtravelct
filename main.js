@@ -144,6 +144,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   const selectedCar = getCarFromURL(cars); // cars từ main.js
+
   renderCarDetail(selectedCar);
 
   const form = document.getElementById("form");
@@ -262,7 +263,7 @@ window.addEventListener("DOMContentLoaded", function () {
 function handleSearch() {
   const location = document.querySelector(".select.red-border").value;
   const type = document.querySelectorAll(".select")[1].value;
-
+ 
   // Chuyển qua trang search.html và truyền tham số qua URL
   const query = `?location=${encodeURIComponent(location)}&type=${encodeURIComponent(type)}`;
   window.location.href = "search.html" + query;
@@ -275,8 +276,6 @@ function searchTaiXe() {
   const province = document.getElementById("province-select").value;
   const district = document.getElementById("district-select").value.trim().toLowerCase();
 
-  console.log("province" , province)
-  console.log("district" , district)
 
   const ketQua = (province === "all" || !province)
   ? giaThueLaiXe
@@ -301,7 +300,7 @@ function generateSeatOptions(cars) {
     const seat = car.seats || 0;
     seatCounts[seat] = (seatCounts[seat] || 0) + 1;
   });
-
+ 
   const select = document.getElementById("select-seat");
   if (!select) {
     console.error("❌ Không tìm thấy phần tử #select-seat");
@@ -311,6 +310,7 @@ function generateSeatOptions(cars) {
   select.innerHTML = '<option value="0">Tất cả dòng xe</option>';
 
   for (const [seat, count] of Object.entries(seatCounts)) {
+    
     const option = document.createElement("option");
     option.value = seat;
     option.textContent = `Xe ${seat} chỗ (${count})`;
@@ -435,16 +435,16 @@ function getCarFromURL(cars) {
 
 
 function setupSendButton(car) {
-  console.log("test",car)
+
   
   const form = document.getElementById("booking-form");
   const selectedCarInput = document.getElementById("selected-car");
-  console.log("test 2" ,form)
+  
   if (form) {
     formOverlay.style.display = "flex";
     selectedCarInput.value = car;
   }
-  console.log("test22")
+ 
  
  
 }

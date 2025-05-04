@@ -7,11 +7,12 @@ let filteredCars = [];
 
 // ✅ Lấy tham số từ URL
 function getSearchParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-      type: params.get("type") || ""  // Ví dụ: "4", "7", "16"
-    };
-  }
+  const params = new URLSearchParams(window.location.search);
+  return {
+    type: params.get("type") || "",
+    brand: params.get("brand") || ""
+  };
+}
   
   // ✅ Lọc danh sách xe theo số ghế
   function filterCarsBySeats(cars, seatValue) {
@@ -91,11 +92,24 @@ function renderPaginationControls() {
   function updateResultTitle(count, seats) {
     const el1 = document.getElementById("result-title");
     const el2 = document.querySelector(".result-find");
-  
-    const text = count > 0
+   const { type } = getSearchParams();
+   console.log("type ",type )
+   /*  const text = count > 0
       ? `Tìm thấy ${count} xe ${seats} chỗ`
-      : `Không tìm thấy kết quả nào`;
-  
+      : `Không tìm thấy kết quả nào`; */
+    
+    let text  = `Không tìm thấy kết quả nào`;
+    if(count > 0)
+    {
+      if(type > 0)
+      {
+        text = `Tìm thấy ${count} xe ${type} chỗ`
+      }else{
+        text = `Tìm thấy ${count} xe `
+      }
+    }
+
+
     if (el1) el1.textContent = text;
     if (el2) el2.textContent = text;
   }
@@ -115,7 +129,7 @@ function renderPaginationControls() {
    
     generateFilters(cars);
     setupFilterListeners(); // lắng nghe thay đổi
-    renderSearchResults(cars); // hoặc lọc sẵn nếu có URL
+  
 
     restoreSelectedType(type); // giữ lại select phù hợp
   };
