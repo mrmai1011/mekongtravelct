@@ -1,0 +1,55 @@
+.sotranh-section {
+    padding: 60px 20px;
+    background-color: #fffaf8;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 30px;
+    color: #c0392b;
+    margin-bottom: 50px;
+  }
+  
+  .spot-vertical {
+    margin-bottom: 50px;
+  }
+  
+  .spot-content {
+    margin-bottom: 15px;
+  }
+  
+  .spot-content h3 {
+    font-size: 22px;
+    color: #c0392b;
+    margin-bottom: 10px;
+  }
+  
+  .spot-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .spot-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  
+
+  .intro-text {
+    font-size: 18px;       /* Hoặc 20px nếu muốn to hơn nữa */
+    line-height: 1.8;      /* Giãn dòng dễ đọc */
+    color: #333;           /* Màu chữ đậm hơn một chút */
+    text-align: justify;   /* Căn đều 2 bên cho đẹp */
+    margin-bottom: 30px;   /* Tạo khoảng cách với nội dung bên dưới */
+  }
+  
