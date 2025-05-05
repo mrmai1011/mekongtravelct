@@ -1,12 +1,12 @@
 
   const cars = [
     /* xe 4 cho */
-    { ten: "Toyota Vios", gia: "650,000đ/ngày", hinh: "images/xe4cho/vios.jpg", seats: 4 ,brand :"Toyota"},
-    { ten: "Honda Civic", gia: "700,000đ/ngày", hinh: "images/xe4cho/civic.jpg", seats: 4 ,brand :"Honda" },
-    { ten: "Mazda 3", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Mazda"},
-    { ten: "Mazda 6", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Mazda" },
-    { ten: "Accent", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Mazda" },
-    { ten: "Camry", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Toyota"},
+    { ten: "Toyota Vios", gia: "650,000đ/ngày", hinh: "images/xe4cho/vios.jpg", seats: 4 ,brand :"Toyota", noibat: true},
+    { ten: "Honda Civic", gia: "700,000đ/ngày", hinh: "images/xe4cho/civic.jpg", seats: 4 ,brand :"Honda", noibat: true },
+    { ten: "Mazda 3", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Mazda", noibat: true},
+    { ten: "Mazda 6", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Mazda", noibat: true },
+    { ten: "Accent", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Mazda", noibat: true },
+    { ten: "Camry", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 ,brand :"Toyota", noibat: true},
     { ten: "MG5", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4, brand :"Toyota"},
     { ten: "Honda City RS", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 , brand :"Toyota"},
     { ten: "Toyota Vios MT", gia: "650,000đ/ngày", hinh: "https://via.placeholder.com/200x100", seats: 4 , brand :"Toyota"},
@@ -30,6 +30,7 @@
     { ten: "Xe Hoa BMW", gia: "1,400,000đ/ngày", hinh: "images/xehoa/bmw.jpg", seats: 4, brand: "BMW", type: "hoa" },
     { ten: "Xe Hoa Audi", gia: "1,500,000đ/ngày", hinh: "images/xehoa/audi.jpg", seats: 4, brand: "Audi", type: "hoa" },
     { ten: "Xe Hoa Bentley", gia: "3,000,000đ/ngày", hinh: "images/xehoa/bentley.jpg", seats: 4, brand: "Bentley", type: "hoa" },
+    /* xe noi bat */
 
   ];
 
@@ -133,6 +134,9 @@
     formOverlay.style.display = "none";
   }
 
+
+
+  
   console.log("✅ main.js đã chạy");
 window.addEventListener("DOMContentLoaded", function () {
   console.log("✅ DOM loaded");
@@ -582,7 +586,6 @@ function submitForm() {
         console.error("Error!", error.message);
       });
   });
-
 
 
 
