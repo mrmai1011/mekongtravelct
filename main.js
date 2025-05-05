@@ -144,18 +144,20 @@ noibatCars.forEach((car) => {
 
 // Slide logic
 let currentIndex = 0;
-const visibleItems = 5;
-const totalItems = noibatCars.length;
-const maxIndex = totalItems - visibleItems;
+
 
 function updateSliderPosition() {
   const itemsPerView = getItemsPerView();
+  const totalItems = noibatCars.length;
+  const maxIndex = Math.max(0, totalItems - itemsPerView);
+
+  // Cập nhật lại currentIndex nếu vượt quá maxIndex sau khi thay đổi kích thước
+  if (currentIndex > maxIndex) {
+    currentIndex = maxIndex;
+  }
+
   const offsetPercent = (100 / itemsPerView) * currentIndex;
-
-
- /*  const offsetPercent = currentIndex * 20; // Mỗi item chiếm 20% */
-  
- track.style.transform = `translateX(-${offsetPercent}%)`;
+  track.style.transform = `translateX(-${offsetPercent}%)`;
 
   prevBtn.style.display = currentIndex > 0 ? "block" : "none";
   nextBtn.style.display = currentIndex < maxIndex ? "block" : "none";
@@ -170,14 +172,17 @@ prevBtn.addEventListener("click", () => {
 });
 
 nextBtn.addEventListener("click", () => {
+  const itemsPerView = getItemsPerView();
+  const maxIndex = Math.max(0, noibatCars.length - itemsPerView);
   if (currentIndex < maxIndex) {
     currentIndex++;
     updateSliderPosition();
   }
 });
-
+const itemsPerView = getItemsPerView();
+const totalItems = noibatCars.length;
 // Hiện nút nếu cần
-if (totalItems > visibleItems) {
+if (totalItems > itemsPerView) {
   prevBtn.style.display = "block";
   nextBtn.style.display = "block";
 }
@@ -186,9 +191,11 @@ updateSliderPosition();
 }
 
 function getItemsPerView() {
-  if (window.innerWidth <= 768) return 1;  // Điện thoại
-  if (window.innerWidth <= 1024) return 3; // Tablet
-  return 5;                                // Desktop
+  const width = window.innerWidth;
+  if (width <= 430) return 1;
+  if (width <= 768) return 2;
+  if (width <= 1024) return 3;
+  return 5;                            // Desktop
 }
 XeNoiBat();
   /* xe 7 cho  */

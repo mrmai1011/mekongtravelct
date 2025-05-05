@@ -256,7 +256,12 @@
       flex: 0 0 100%; /* 5 items mỗi lần => 100% / 5 = 20% */
     }
   }
-  @media (min-width: 431px) and (max-width: 1024px) {
+  @media (min-width: 431px) and (max-width: 768px) {
+    .car-card{
+      flex: 0 0 50%; /* 5 items mỗi lần => 100% / 5 = 20% */
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
     .car-card{
       flex: 0 0 33.3333%; /* 5 items mỗi lần => 100% / 5 = 20% */
     }
