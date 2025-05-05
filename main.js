@@ -88,12 +88,14 @@
   const container4cho = document.querySelector(".item-xe4cho");
   const container7cho = document.querySelector(".item-xe7cho");
   const formOverlay = document.getElementById("booking-form");
-    const selectedCarInput = document.getElementById("selected-car");
+  const selectedCarInput = document.getElementById("selected-car");
+  const containernoibat = document.querySelector(".slider-track");
 
     filterCarsBySeats(cars,4).forEach((item) => {
     const div = document.createElement("div");
     div.className = "item";
     div.innerHTML = `
+     
       <div class="item-image">
             <img src="${item.hinh}" alt="${item.ten}" onerror="this.onerror=null;this.src='./images/logo_1.jpg';">
       </div>
@@ -111,14 +113,95 @@
     if (container4cho === null) return;
     container4cho.appendChild(div);
   });
+/*   xe noi bat */
+function XeNoiBat()
+{
+  const noibatCars = filterNoibat(cars); // Lọc xe nổi bật
+const track = document.getElementById("noibat-track");
+const prevBtn = document.querySelector(".slide-btn.prev");
+const nextBtn = document.querySelector(".slide-btn.next");
+
+ if (!track || !noibatCars || noibatCars.length === 0) return;
+
+noibatCars.forEach((car) => {
+  const div = document.createElement("a");
+      div.className = "car-card";
+      div.href = `car-detail.html?car=${encodeURIComponent(car.ten)}`;
+      div.innerHTML = `
+        ${car.noibat ? '<div class="ribbon">Nổi bật</div>' : ''}
+        <img src="${car.hinh}" alt="${car.ten}" onerror="this.src='images/logo_1.jpg'" />
+        <div class="car-info">
+          <h3>${car.ten}</h3>
+          <div class="price">${car.gia}</div>
+          <div class="car-tags">
+            <span class="car-tag red">${car.brand}</span>
+            <span class="car-tag">${car.seats} chỗ</span>
+          </div>
+        </div>
+      `;
+      track.appendChild(div);
+});
+
+// Slide logic
+let currentIndex = 0;
+const visibleItems = 5;
+const totalItems = noibatCars.length;
+const maxIndex = totalItems - visibleItems;
+
+function updateSliderPosition() {
+  const itemsPerView = getItemsPerView();
+  const offsetPercent = (100 / itemsPerView) * currentIndex;
+
+
+ /*  const offsetPercent = currentIndex * 20; // Mỗi item chiếm 20% */
+  
+ track.style.transform = `translateX(-${offsetPercent}%)`;
+
+  prevBtn.style.display = currentIndex > 0 ? "block" : "none";
+  nextBtn.style.display = currentIndex < maxIndex ? "block" : "none";
+}
+
+// Gắn sự kiện
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSliderPosition();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    updateSliderPosition();
+  }
+});
+
+// Hiện nút nếu cần
+if (totalItems > visibleItems) {
+  prevBtn.style.display = "block";
+  nextBtn.style.display = "block";
+}
+
+updateSliderPosition();
+}
+
+function getItemsPerView() {
+  if (window.innerWidth <= 768) return 1;  // Điện thoại
+  if (window.innerWidth <= 1024) return 3; // Tablet
+  return 5;                                // Desktop
+}
+XeNoiBat();
+  /* xe 7 cho  */
 
   filterCarsBySeats(cars,7).forEach((item) => {
     const div = document.createElement("div");
     div.className = "item";
     div.innerHTML = `
+      
       <div class="item-image">
             <img src="${item.hinh}" alt="${item.ten}" onerror="this.onerror=null;this.src='./images/logo_1.jpg';">
       </div>
+      
       <div class="item-info">
         <h3>${item.ten}</h3>
         <p>Giá: ${item.gia}</p>
@@ -256,11 +339,17 @@ window.addEventListener("DOMContentLoaded", function () {
   function filterCarsBySeats(cars, seatCount) {
     return cars.filter(car => car.seats === seatCount);
   }
+
   function filterCars(cars, seatCount, minPrice, maxPrice) {
     return cars.filter(car => {
       const giaNumber = parseInt(car.gia.replace(/\D/g, "")); // Lấy số từ "650,000đ"
       return car.seats === seatCount && giaNumber >= minPrice && giaNumber <= maxPrice;
     });
+  }
+  function filterNoibat(cars){
+    return cars.filter(car =>{
+      return car.noibat === true;
+    })
   }
 
  /*  trang header */

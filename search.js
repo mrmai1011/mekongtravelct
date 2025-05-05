@@ -2,7 +2,7 @@
 
 
 let currentPage = 1;
-const itemsPerPage = 10;
+const itemsPerPage = 8;
 let filteredCars = [];
 
 // ✅ Lấy tham số từ URL
@@ -48,7 +48,7 @@ function getSearchParams() {
       div.className = "car-card";
       div.href = `car-detail.html?car=${encodeURIComponent(car.ten)}`;
       div.innerHTML = `
-        <div class="ribbon">Nổi bật</div>
+        ${car.noibat ? '<div class="ribbon">Nổi bật</div>' : ''}
         <img src="${car.hinh}" alt="${car.ten}" onerror="this.src='images/logo_1.jpg'" />
         <div class="car-info">
           <h3>${car.ten}</h3>

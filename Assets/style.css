@@ -336,7 +336,7 @@
     justify-content: center;
     color: #D50000;
   }
-
+  
 /*   thong tin xe 4 cho */
   .item-xe4cho{
     display: flex;
@@ -393,6 +393,54 @@
   .item-button:hover {
     background-color: #000;
   }
+
+ /*  xe noi bat */
+ .item-xenoibat {
+  position: relative;
+  width: 100%;
+  padding: 0 10%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.item {
+  flex: 0 0 20%; /* 5 items mỗi lần => 100% / 5 = 20% */
+  box-sizing: border-box;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+
+.slide-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.slide-btn.prev {
+  left: 5%;
+}
+
+.slide-btn.next {
+  right: 5%;
+}
 
 
 
