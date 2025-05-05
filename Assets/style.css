@@ -414,7 +414,7 @@
 }
 
 .item {
-  flex: 0 0 110%; /* 5 items mỗi lần => 100% / 5 = 20% */
+  flex: 0 0 20%; /* 5 items mỗi lần => 100% / 5 = 20% */
   box-sizing: border-box;
   padding: 8px;
   transition: all 0.3s ease;
