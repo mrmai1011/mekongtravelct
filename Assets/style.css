@@ -393,7 +393,24 @@
   .item-button:hover {
     background-color: #000;
   }
+  @media (max-width: 768px) {
+    .item-xe4cho,
+    .item-xe7cho {
+      padding: 15px;
+      gap: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .item {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  
 
+  
  /*  xe noi bat */
  .item-xenoibat {
   position: relative;
