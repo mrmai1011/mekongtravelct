@@ -33,10 +33,10 @@
 
     /* xe hoa cuoi hoi */
     /* xe hoa */
-    { ten: "Xe Hoa Mercedes Trắng", gia: "1,200,000đ/ngày", hinh: "images/xehoa/mercedes-trang.jpg", seats: 4, brand: "Mercedes", type: "hoa" },
-    { ten: "Xe Hoa BMW", gia: "1,400,000đ/ngày", hinh: "images/xehoa/bmw.jpg", seats: 4, brand: "BMW", type: "hoa" },
-    { ten: "Xe Hoa Audi", gia: "1,500,000đ/ngày", hinh: "images/xehoa/audi.jpg", seats: 4, brand: "Audi", type: "hoa" },
-    { ten: "Xe Hoa Bentley", gia: "3,000,000đ/ngày", hinh: "images/xehoa/bentley.jpg", seats: 4, brand: "Bentley", type: "hoa" },
+    { ten: "Xe Hoa Mercedes Trắng", gia: "0đ/ngày", hinh: "images/xehoa/mercedes-trang.jpg", seats: 4, brand: "Mercedes", type: "hoa" },
+    { ten: "Xe Hoa BMW", gia: "0đ/ngày", hinh: "images/xehoa/bmw.jpg", seats: 4, brand: "BMW", type: "hoa" },
+    { ten: "Xe Hoa Audi", gia: "0đ/ngày", hinh: "images/xehoa/audi.jpg", seats: 4, brand: "Audi", type: "hoa" },
+    { ten: "Xe Hoa Bentley", gia: "0đ/ngày", hinh: "images/xehoa/bentley.jpg", seats: 4, brand: "Bentley", type: "hoa" },
     /* xe noi bat */
 
   ];

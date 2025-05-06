@@ -1,7 +1,7 @@
 .intro-mekong {
     padding: 60px 20px;
     background: #fafafa;
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: #333;
   }
   
@@ -56,7 +56,7 @@
   .mekong-philosophy {
     background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
     padding: 80px 20px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: #222;
   }
   
@@ -136,7 +136,7 @@
 .business-section {
     background: #fafafa;
     padding: 80px 20px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: #333;
     overflow-x: hidden;
   }
@@ -354,7 +354,7 @@
     text-transform: uppercase;
     position: relative;
     margin-bottom: 15px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .facility-section h2::after {
@@ -421,7 +421,7 @@
     color: #b00000;
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .contact-info {
