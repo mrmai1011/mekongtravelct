@@ -1,0 +1,180 @@
+/* ===== CƠ BẢN + NỀN TOÀN TRANG ===== */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+  }
+  
+  /* ===== VÙNG CHỨA ===== */
+  .tourlux-wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  
+
+  
+  /* ===== HIỆU ỨNG TIÊU ĐỀ NỔI BẬT ===== */
+  @keyframes slideFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .tourlux-heading {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #e50914;
+    text-transform: uppercase;
+    position: relative;
+    animation: slideFadeIn 1s ease-out forwards;
+    opacity: 0;
+    padding-top: 10px;
+  }
+  
+  /* Tạo gạch dưới tinh tế */
+  .tourlux-heading::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #e50914;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 4px;
+  }
+  
+  /* ===== CARD TOUR DU LỊCH ===== */
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .tourlux-card {
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    animation: fadeSlideUp 1s ease forwards;
+    opacity: 0;
+  }
+  
+  .tourlux-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ===== HÌNH ẢNH ===== */
+  .tourlux-img-wrapper {
+    position: relative;
+  }
+  
+  .tourlux-img-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+
+  
+  
+  /* ===== NHÃN NỔI BẬT ===== */
+  @keyframes pulseBadge {
+    0% { transform: scale(1); background-color: #e50914; }
+    50% { transform: scale(1.1); background-color: #ff2b2b; }
+    100% { transform: scale(1); background-color: #e50914; }
+  }
+  
+  .tourlux-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e50914;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: pulseBadge 1.5s infinite;
+  }
+  
+  /* ===== NỘI DUNG CARD ===== */
+  .tourlux-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tourlux-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+  
+  /* ===== NÚT LIÊN HỆ ===== */
+  .tourlux-contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .tourlux-contact-btn:hover {
+    background-color: #ff2b2b;
+    transform: scale(1.05);
+  }
+  
+
+
+  .tourlux-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chia lưới thành 4 cột */
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+  }
+  
+  .tourlux-card {
+    display: flex;
+    flex-direction: column; /* Các phần tử bên trong thẻ được xếp theo chiều dọc */
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .tourlux-row {
+      grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột trên màn hình nhỏ hơn */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tourlux-row {
+      grid-template-columns: 1fr; /* Mỗi thẻ sẽ chiếm 100% chiều rộng trên màn hình rất nhỏ */
+    }
+  }
+  
+  
+  

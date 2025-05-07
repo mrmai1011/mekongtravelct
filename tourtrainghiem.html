@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour du lịch trải nghiệm cùng Mekong Travel</title>
+    <title>Tin tức tại Mekong Travel</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="./icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./Assets/xehoa.css">
+    <link rel="stylesheet" href="./Assets/product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/tintuc.css">
+    <link rel="stylesheet" href="./Assets/tourtrainghiem.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="slider">
+      <img src="./images/Slider/img_s1.jpg" alt="" class="banner-image active">
+      <img src="./images/Slider/img_s2.jpg" alt="" class="banner-image">
+      <img src="./images/Slider/img_s3.jpg" alt="" class="banner-image">
+    
+      <div class="banner-container">
+        <div class="banner-text">
+          MEKONG TRAVEL<br>
+          <span class="subtitle">chìa khóa cho chuyến đi hoàn hảo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tourlux-wrapper">
+        <h2 class="tourlux-heading">Tour du lịch trải nghiệm</h2>
+      
+        <!-- THÊM VÙNG CHỨA HÀNG NGANG -->
+        <div class="tourlux-row">
+          <div class="tourlux-card">
+            <div class="tourlux-img-wrapper">
+              <img src="./images/trainghiem_datmui/dm1.jpg" alt="Tour Cần Thơ - Cà Mau">
+              <span class="tourlux-badge">Nổi bật</span>
+            </div>
+            <div class="tourlux-content">
+              <h3 class="tourlux-title">TOUR DU LỊCH TRẢI NGHIỆM - ĐẤT MŨI CÀ MAU</h3>
+              <a href="./trainghiem_datmui.html" class="tourlux-contact-btn">Chi tiết</a>
+            </div>
+          </div>
+      
+        
+        </div>
+      </div>
+      
+      <div class="booking-support-wrapper">
+        <div class="booking-form">
+          <h2>Thông tin khách hàng</h2>
+          <input type="text" id="phone" placeholder="Số điện thoại">
+          <input type="text" id="name" placeholder="Họ & tên...">
+          <input type="email" id="email" placeholder="Địa chỉ email...">
+          <textarea id="message" placeholder="Lời nhắn"></textarea>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" id="policy"> Đồng ý với <a href="#">chính sách bảo mật</a>
+          </label>
+          <button class="btn-submit" onclick="submitForm()">Gửi liên hệ</button>
+        </div>
+        
+      
+        <div class="support-info">
+          <div class="support-card">
+            <div class="support-header">
+              <div>
+                <h3>Hỗ trợ tư vấn khách hàng</h3>
+                <p class="sub">Nhanh chóng - chuyên nghiệp</p>
+              </div>
+              <img src="./images/logo_1.jpg" alt="logo" class="support-logo">
+            </div>
+            <div class="support-detail">
+              <a href="https://maps.app.goo.gl/fYyv9kTjr1yVqAYc9" class="map-a"><i class="fas fa-map-marker-alt"></i> Số 153, Đường 5C, KDC Hồng Loan, Cái Răng, Cần Thơ</a>
+              <p><i class="fas fa-envelope"></i> kdmekongtravel@gmail.com</p>
+            </div>
+            <div class="support-call">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:0949151596" style="text-decoration: none; color: #d50000;">Gọi ngay: 0949151596</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Cột 1: Logo & thông tin công ty -->
+          <div class="footer-column">
+            <img src="./images/logo_1.jpg" alt="" class="footer-logo" />
+            <p><strong>CÔNG TY THƯƠNG MẠI DỊCH VỤ MEKONG TRAVEL</strong></p>
+            <p>MST: 1801785922</p>
+            <p><em> Số 153 Đường số 12, Khu dân cư Hồng Loan, Phường Hưng Thạnh, Quận Cái Răng, Thành phố Cần Thơ, Việt Nam</em></p>
+            <p>📞 Hotline: 094-916-1698</p>
+            <p>📧 Email: kdmekongtravel@gmail.com</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61574960585396"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+      
+          <!-- Cột 2: Giới thiệu -->
+          <div class="footer-column">
+            <h4>Giới thiệu</h4>
+            <ul>
+              <li><a href="#">Về Mekong Travel</a></li>
+              <li><a href="#">Mekong Travel Blogs</a></li>
+              <li><a href="#">Điều khoản sử dụng</a></li>
+            </ul>
+          </div>
+      
+          <!-- Cột 3: Chính sách -->
+          <div class="footer-column">
+            <h4>Chính sách</h4>
+            <ul>
+              <li><a href="#">Chính sách và quy định</a></li>
+              <li><a href="#">Quy chế hoạt động</a></li>
+              <li><a href="#">Bảo mật thông tin</a></li>
+              <li><a href="#">Giải quyết khiếu nại</a></li>
+            </ul>
+          </div>
+      
+          <!-- Cột 4: Dịch vụ -->
+          <div class="footer-column">
+            <h4>Dịch vụ</h4>
+            <ul>
+              <li><a href="#">Thuê Xe Tự Lái</a></li>
+              <li><a href="#">Tour du lịch</a></li>
+              <li><a href="#">Thuê lái xe hộ</a></li>
+              <li><a href="#">Thuê xe hoa</a></li>
+              <li><a href="#">Kí gửi xe tháng</a></li>
+              <li><a href="#">Bảo dưỡng & lắp định vị xe</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      
+      </div>
+
+    <script src="header.js"></script>
+    <script src="main.js"></script>
+    <script>
+        renderHeader();
+   </script>
+
+   <!-- chay anh slider -->
+<script>
+  const images = document.querySelectorAll('.banner-image');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 5000);
+</script>
+</body>
+</html>

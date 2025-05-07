@@ -15,6 +15,7 @@ function renderHeader() {
                 <li><a href="./laixeho.html">Thuê lái xe hộ</a></li>
                 <li><a href="./xehoa.html">Thuê xe hoa</a></li>
                 <li><a href="./kiguixethang.html">Kí gửi xe tháng</a></li>
+                <li><a href="./tourtrainghiem.html">Tour DL trải nghiệm</a></li>
               </ul>
            </li>
         <li><a href="./tintuc.html">Tin tức</a></li>
@@ -31,6 +32,7 @@ function renderHeader() {
             <li><a href="./laixeho.html">Thuê lái xe hộ</a></li>
             <li><a href="./xehoa.html">Thuê xe hoa</a></li>
             <li><a href="./kiguixethang.html">Kí gửi xe tháng</a></li>
+            <li><a href="./tourtrainghiem.html">Tour du lịch trải nghiệm</a></li>
           </ul>
         </li>
         <li><a href="./tintuc.html">Tin tức</a></li>
