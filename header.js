@@ -1,7 +1,10 @@
 function renderHeader() {
     const headerHTML = `
   
-      <a href="./index.html"><img src="./images/logo_1.jpg" alt="Mekong Travel Logo" class="logo_img"></a>
+     <a href="./index.html">
+  <img src="./images/logo_1.jpg" alt="Mekong Travel Logo" class="logo_img" oncontextmenu="return false;">
+</a>
+
         <div class="toggle-menu" onClick="onClickMenu()">☰</div>
        
 
@@ -54,3 +57,7 @@ function renderHeader() {
   
     document.getElementById("header").innerHTML = headerHTML;
   }
+
+  document.getElementById('logo_img').addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
