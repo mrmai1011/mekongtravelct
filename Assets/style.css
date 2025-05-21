@@ -60,11 +60,16 @@
     /* justify-content: space-between; */
 }
 
+
+
+
 .logo_img {
-    width: 98px;
-    height: 98px;
-    
+  width: 98px;
+  height: 98px;
 }
+
+
+
 
 .toggle-menu{
   display: none;
@@ -253,11 +258,12 @@
   z-index: 2;
 }
 
+/* Mặc định cho màn hình lớn (máy tính) */
 .banner-text {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, 20%); /* bắt đầu thấp hơn */
+  transform: translate(-50%, 20%);
   opacity: 0;
   animation: slideUp 1.2s ease-out forwards;
   color: white;
@@ -270,16 +276,24 @@
   text-transform: uppercase;
 }
 
-@keyframes slideUp {
-  0% {
-    transform: translate(-50%, 20%);
-    opacity: 0;
+/* Cho điện thoại: màn hình nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
+  .banner-text {
+    top: 20%;
   }
-  100% {
-    transform: translate(-50%, -50%);
-    opacity: 1;
+
+  @keyframes slideUp {
+    0% {
+      transform: translate(-50%, 20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -20%);
+      opacity: 1;
+    }
   }
 }
+
 
 
 .banner-text .subtitle {
