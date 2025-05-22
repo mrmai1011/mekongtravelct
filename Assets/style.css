@@ -1034,6 +1034,11 @@
 .footer-logo {
   width: 150px;
   margin-bottom: 15px;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .footer-column h4 {
