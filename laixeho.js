@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     data.append("notes", notes);
 
     // Thay link này bằng Google Script Web App URL của bạn
-    const webhookURL = "https://script.google.com/macros/s/AKfycbwCtVnGJzK5NsFCo0tpAEBg_uuwiXLWdCxMxh2ABtawayOKIK7kQXyAZ7Zj5nuPjbj3Cw/exec";
+    const webhookURL = "https://script.google.com/macros/s/AKfycbwXhG5KjbNgLBnoG9Befn4s43EK2UMLn0qCDpj0NrxU6E5yZdw8KhBhgTdTxkh7IZs/exec";
 
     try {
       const res = await fetch(webhookURL, {

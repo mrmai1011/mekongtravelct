@@ -1,5 +1,5 @@
 const form = document.getElementById('contactForm');
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbz6_O1P4yxygBYG4UKvS8ITQPJfSDXHnViFOAKH9wUuHW59z581pw4yD6baznLPaX8Y/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_ONF6kaYC6ENZnvPxJqyFQcdxebc6GftsIz3menJWC6OucbfM1BpRVVyBdmtIvtDy/exec';
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();

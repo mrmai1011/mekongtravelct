@@ -306,7 +306,7 @@ window.addEventListener("DOMContentLoaded", function () {
     formData.append("return_date", formattedReturn);
   
     const formOverlay = document.getElementById("booking-form");
-    const webhook = "https://script.google.com/macros/s/AKfycbxBd9rmDO9bOJ0l7_sZ2ysu-dkDWmwH8wZoUVfhoxEAEzgQyHyhV2US3-FPMTOHQo5nkw/exec";
+    const webhook = "https://script.google.com/macros/s/AKfycbxB6tCivtDpVZ1uOOmTDIgAuInLF_YNaQzUbHzrd57yUyQMJK00EVBY6UGLwhbxZ0RChQ/exec";
   
     try {
       const res = await fetch(webhook, {
@@ -488,7 +488,7 @@ function renderCarDetail(car) {
         <a href="https://www.facebook.com/profile.php?id=61574960585396"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.tiktok.com/@mekongtravelcantho?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
@@ -654,7 +654,7 @@ function submitForm() {
     return;
   }
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyK6wo6rMV7sLnrPb4QSOxKiFyZPaakf7XvjX_qF_SyajuIESbXligqJghsefzmuXjr/exec"; // thay bằng link của bạn
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwCRxw-JTssck1iXPvBKbkRaMq3m0FKT94FgF5ZRduER7Fr0Q2eDvcpGLLljiiOax6t/exec"; // thay bằng link của bạn
 
   const formData = new FormData();
   formData.append("phone", phone);
@@ -673,7 +673,7 @@ function submitForm() {
 
 
   const consignForm = document.getElementById('consignForm');
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzzXHSKD9J7CjvqW3ib6Xv0vtmz87ufw2Ph-_lH_7U8zXC8LEZBMjx7cIlenY4ksRIV/exec"; // Thay bằng link của bạn
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxzmPA9BP9mbQ5LLvFCmTwtI1fmMVVXwKn8idrgCNvMMamMrFPFtWMntTJiLgWDFh9I/exec"; // Thay bằng link của bạn
 
   consignForm.addEventListener('submit', function(e) {
     e.preventDefault();

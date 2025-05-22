@@ -120,7 +120,13 @@ body {
     color: #666;
     margin-bottom: 10px;
   }
-  
+  @media (max-width: 768px) {
+    .item-xehoa {
+        flex-direction: column; /* Các item xếp theo chiều dọc */
+        align-items: center;     /* Căn giữa các item */
+        gap: 15px;               /* Giảm khoảng cách giữa các item nếu muốn */
+    }
+}
   .item-xehoa .item-button {
     background-color: red;
     color: white;

@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       data.append("return_date", form["return-date"].value ? formatDate(returnDate) : "");
       data.append("driver_request", driverRequest);
   
-      const webhookURL = "https://script.google.com/macros/s/AKfycbxd6zlQp1JlyLNAKJdUMWeBi7dgJImhiSOMkd62uvBmJt8jDNBB6ye7ZcAADEwniDcd/exec";
+      const webhookURL = "https://script.google.com/macros/s/AKfycbz3UqUmL3n0Gx1QWNzMddoSt6vE0YJiySGgV1FsU6y1Aph_6Xqf8eRvSrf-Pkt64PxP/exec";
   
       try {
         const res = await fetch(webhookURL, {

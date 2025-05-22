@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     formData.append("note", note);
     formData.append("car", car);
 
-    const webhook = "https://script.google.com/macros/s/AKfycbxO9_WLQo_BTH6pgMHVKrGnE0ITZS4MOfe_MR7lIBmzmjfz6fz8jMuHpa_av_ptdu1kww/exec";
+    const webhook = "https://script.google.com/macros/s/AKfycbyBRUOiCCHI8nXifAXLykPC-0fbyF_SByQZvKowd5yZHdHe26DVlDj1qEw3RcnE7nLTRA/exec";
 
     try {
       const res = await fetch(webhook, {
