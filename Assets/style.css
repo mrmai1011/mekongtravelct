@@ -279,7 +279,7 @@
 /* Cho điện thoại: màn hình nhỏ hơn hoặc bằng 768px */
 @media (max-width: 768px) {
   .banner-text {
-    top: 20%;
+    top: 10%;
   }
 
   @keyframes slideUp {
