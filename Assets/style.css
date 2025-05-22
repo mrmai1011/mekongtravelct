@@ -10,6 +10,11 @@
     width: 98px;
     height: 98px;
     margin-left: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 #nav .subnav {
