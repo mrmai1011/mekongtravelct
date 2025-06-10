@@ -1,0 +1,88 @@
+.news-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.news-container .category {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c62828;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  border-left: 4px solid #c62828;
+  padding-left: 10px;
+}
+
+.news-container .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.news-container .meta {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.news-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.news-container .content p {
+  margin-bottom: 16px;
+}
+
+.news-container .subheading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0 10px;
+  color: #b71c1c;
+  border-left: 4px solid #ef5350;
+  padding-left: 10px;
+}
+
+.news-container ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.news-container ul li {
+  margin-bottom: 10px;
+}
+
+.news-container ul li .highlight {
+  font-weight: bold;
+  color: #d84315;
+}
+
+.news-container .checklist {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.news-container .brand {
+  font-weight: bold;
+  color: #c62828;
+}
+
+.news-container .emphasis {
+  font-size: 17px;
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #f1f8e9;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
